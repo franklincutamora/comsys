@@ -1,0 +1,48 @@
+$thumbnaildimension: 100px;
+
+.mb-none {
+    margin-bottom: 0 !important;
+}
+
+.mb-small {
+    margin-bottom: 10px;
+}
+
+.mb-medium {
+    margin-bottom: 20px;
+}
+
+.mb-large {
+    margin-bottom: 50px;
+}
+
+.mb-xlarge {
+    margin-bottom: 80px;
+}
+
+.text-red {
+    color: $red;
+}
+
+.profile-thumbnail {
+    width: $thumbnaildimension;
+    height: $thumbnaildimension;
+    background-position: center;
+    background-size: cover;
+    background-color: grey;
+    background-image: url('/uploads/dummyphoto.png');
+}
+
+.profile-name {
+    line-height: 100px;
+}
+
+@media (max-width: 767px) {
+    .profile-thumbnail {
+        margin: auto;
+    }
+
+    .profile-name {
+        text-align: center;
+    }
+}
