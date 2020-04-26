@@ -95,15 +95,7 @@
                     <input type="tel" class="form-control" name="mobnum" required pattern="\d{11}" value="{{$person->mobnum}}" title="Input 11 digit number.">
                 </div>
             </div>
-            <div class="form-row">
-                <div class="form-group col-12 col-md-4">
-                    <label for="photo">Replace Photo</label>
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="photo" name="photo" title="2 x 2 profile photo">
-                        <label class="custom-file-label" for="photo">jpeg, jpg, png</label>
-                    </div>
-                </div>
-            </div>
+            <upload-photo-component></upload-photo-component>
             <div class="form-row">
                 <div class="form-group col-12">
                     <div class="float-md-right text-center">
@@ -112,14 +104,6 @@
                     </div>
                 </div>
             </div>
-            <script>
-                (function(){
-                    $("#photo").on("change", function() {
-                        let fileName = $(this).val().split("\\").pop();
-                        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-                    });
-                })();
-            </script>
         {!! Form::close() !!}
         </div>
     </div>

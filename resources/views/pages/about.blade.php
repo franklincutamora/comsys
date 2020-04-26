@@ -9,5 +9,6 @@
         @endforeach
     </ul>
     @endif
+    <example-component></example-component>
 </section>
 @endsection 
