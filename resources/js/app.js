@@ -26,7 +26,7 @@ Vue.component(
 
 Vue.component(
     "upload-photo-component",
-    require("./components/UploadPhotoComponent.vue").default
+    require("./components/Persons/UploadPhotoComponent.vue").default
 );
 
 /**
