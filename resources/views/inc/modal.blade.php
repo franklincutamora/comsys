@@ -1,6 +1,9 @@
 <div class="modal" tabindex="-1" role="dialog" id="confirmDelete" aria-labelledby="modalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
+        {!! Form::open(['action' => ['PersonsController@destroy', $person->id]]) !!}
+            @csrf
+            {{ Form::hidden('_method', 'DELETE') }}
             <div class="modal-header bg-danger text-white">
                 <h5 class="modal-title" id="modalTitle">Confirm Delete</h5>
                 <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
@@ -14,6 +17,7 @@
                 <button type="submit" class="btn btn-primary">Yes</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             </div>
+        {!! Form::close() !!}
         </div>
     </div>
 </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\Http\Request;
 use App\Person;
 
@@ -177,10 +178,11 @@ class PersonsController extends Controller
         $person->lstatus = $request->input('lstatus');
         
         if ($request->hasFile('photo')) {
+            $this->removeImage($person->photo);
             $imagePath = $request->file('photo');
             $imageName = time() . '.' . $imagePath->getClientOriginalExtension();
-            $imagePath->move('uploads', $imageName );
-            $person->photo = $imageName ;
+            $imagePath->move('uploads', $imageName );   
+            $person->photo = $imageName;
         };
 
         $person->save();
@@ -197,8 +199,25 @@ class PersonsController extends Controller
     public function destroy($id)
     {
         $person = Person::find($id);
+        
+        if ($person->photo !== null) {
+            $this->removeImage($person->photo);
+        }
+
         $person->delete();
 
         return redirect('/persons')->with('success', 'Person successfully deleted.');
+    }
+
+    /**
+     * Delete image from the storage folder. Return void.
+     */
+    public function removeImage($filename) 
+    {  
+        $fileSys = new Filesystem();
+
+        if($fileSys->exists(public_path('uploads/'.$filename))){
+            $fileSys->delete(public_path('uploads/'.$filename));
+        }
     }
 }

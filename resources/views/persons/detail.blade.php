@@ -30,8 +30,6 @@
             </div>
         </div>
         <div class="card-body">
-        {!! Form::open(['action' => ['PersonsController@destroy', $person->id]]) !!}
-            @csrf
             <div class="form-row">
                 <div class="form-group col-12 col-md-4">
                     <label for="fname">First Name</label>
@@ -83,15 +81,14 @@
             <div class="form-row">
                 <div class="form-group col-12">
                     <div class="float-md-right text-center">
-                        <a href="{{ url('/persons') }}" class="btn btn-primary text-white"><span class="fa fa-arrow-left"></span> Back</a>
+                        <a href="{{ url('/persons') }}" class="btn btn-primary text-white"><span class="fa fa-arrow-left"></span> Persons List</a>
                         <a href="{{ url("/persons/$person->id/edit") }}" class="btn btn-warning"><span class="fa fa-pencil"></span> Edit</a>                    
-                        {{ Form::hidden('_method', 'DELETE') }}
                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDelete"><span class="fa fa-trash"></span> Delete</button>
                         @include('inc.modal')
                     </div>
                 </div>
             </div>
-        {!! Form::close() !!}
+        
         </div>
     </div>
 </section>

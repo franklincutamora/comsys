@@ -1,7 +1,7 @@
 <template>
     <div class="form-row">
         <div class="form-group col-12 col-md-4">
-            <label for="photo">Upload Photo</label>
+            <label for="photo">{{ state }} Photo</label>
             <div class="custom-file">
                 <input
                     type="file"
@@ -20,6 +20,8 @@
 </template>
 <script>
 export default {
+    props: ["state"],
+
     data() {
         return {
             fileName: "jpeg, jpg, png"

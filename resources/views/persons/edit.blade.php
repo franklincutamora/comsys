@@ -95,7 +95,7 @@
                     <input type="tel" class="form-control" name="mobnum" required pattern="\d{11}" value="{{$person->mobnum}}" title="Input 11 digit number.">
                 </div>
             </div>
-            <upload-photo-component></upload-photo-component>
+            <upload-photo-component state="Change"></upload-photo-component>
             <div class="form-row">
                 <div class="form-group col-12">
                     <div class="float-md-right text-center">

@@ -66,7 +66,7 @@
                     <input type="tel" class="form-control" name="mobnum" required pattern="\d{11}" title="Input 11 digit number.">
                 </div>
             </div>
-            <upload-photo-component></upload-photo-component>
+            <upload-photo-component state="Upload"></upload-photo-component>
             <div class="form-row">
                 <div class="form-group col-12">
                     <div class="float-md-right text-center">
