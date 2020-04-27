@@ -29,7 +29,7 @@
                     <div>Last Update: {{ date("F j, Y, g:i A", strtotime($person->updated_at)) }}</div>
                 </div>
                 <div class="float-md-right text-center">
-                    {!! Form::open(['action' => ['PersonsController@destroy', $person->id]]) !!}
+                    {!! Form::open(['action' => ['Persons\PersonsController@destroy', $person->id]]) !!}
                     <a href="{{ url("/persons/$person->id") }}" class="btn btn-primary text-white"><span class="fa fa-th"></span> View Details</a>
                     <a href="{{ url("/persons/$person->id/edit") }}" class="btn btn-warning"><span class="fa fa-pencil"></span> Edit Details</a>
                     {{ Form::hidden('_method', 'DELETE') }}

@@ -23,5 +23,5 @@ Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 
-Route::resource('persons', 'PersonsController');
-Route::post('/persons/search', 'PersonsController@search')->name('persons.search');
+Route::resource('persons', 'Persons\PersonsController');
+Route::post('/persons/search', 'Persons\PersonsController@search')->name('persons.search');

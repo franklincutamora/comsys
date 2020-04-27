@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Persons;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Filesystem\Filesystem;
