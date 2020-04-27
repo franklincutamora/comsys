@@ -29,6 +29,27 @@ Vue.component(
     require("./components/Persons/UploadPhotoComponent.vue").default
 );
 
+Vue.component(
+    "search-modal-content",
+    require("./components/Persons/SearchModalContent.vue").default
+);
+
+Vue.component(
+    "delete-modal-content",
+    require("./components/Persons/DeleteModalContent.vue").default
+);
+
+Vue.component(
+    "create-form-body",
+    require("./components/Persons/CreateFormBody.vue").default
+);
+
+Vue.component(
+    "detail-form-body",
+    require("./components/Persons/DetailFormBody.vue").default
+);
+
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

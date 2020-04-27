@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="card-body">
-        {!! Form::open(['action' => ['PersonsController@update', $person->id], 'enctype' => 'multipart/form-data', 'method' => 'post']) !!}
+        {!! Form::open(['action' => ['Persons\PersonsController@update', $person->id], 'enctype' => 'multipart/form-data', 'method' => 'post']) !!}
            {{ Form::hidden('_method', 'PUT') }}
             <div class="form-row">
                 <div class="form-group col-12 col-md-4">
