@@ -2063,6 +2063,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["personsUrl"]
 });
@@ -2119,6 +2133,17 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2331,8 +2356,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
 //
 //
 //
@@ -38059,40 +38082,44 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "card-body" },
-    [
-      _vm._m(0),
-      _vm._v(" "),
-      _vm._m(1),
-      _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
-      _c("upload-photo-component", { attrs: { state: "Upload" } }),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-row" }, [
-        _c("div", { staticClass: "form-group col-12" }, [
-          _c("div", { staticClass: "float-md-right text-center" }, [
-            _c(
-              "a",
-              {
-                staticClass: "btn btn-primary text-white",
-                attrs: { href: _vm.personsUrl }
-              },
-              [
-                _c("span", { staticClass: "fa fa-arrow-left" }),
-                _vm._v(" Cancel")
-              ]
-            ),
-            _vm._v(" "),
-            _vm._m(3)
-          ])
+  return _c("div", { staticClass: "card-body" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
+    _vm._m(2),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "form-row" },
+      [
+        _vm._m(3),
+        _vm._v(" "),
+        _c("upload-photo-component", { attrs: { state: "Upload" } })
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-row" }, [
+      _c("div", { staticClass: "form-group col-12" }, [
+        _c("div", { staticClass: "float-md-right text-center" }, [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-primary text-white",
+              attrs: { href: _vm.personsUrl }
+            },
+            [
+              _c("span", { staticClass: "fa fa-arrow-left" }),
+              _vm._v(" Cancel\n                ")
+            ]
+          ),
+          _vm._v(" "),
+          _vm._m(4)
         ])
       ])
-    ],
-    1
-  )
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
@@ -38102,7 +38129,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "form-row" }, [
       _c("div", { staticClass: "form-group col-12 col-md-4" }, [
         _c("label", { attrs: { for: "fname" } }, [
-          _vm._v("First Name\n                "),
+          _vm._v("\n                First Name\n                "),
           _c("small", { staticClass: "text-primary" }, [_vm._v("required")])
         ]),
         _vm._v(" "),
@@ -38129,7 +38156,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "form-group col-12 col-md-4" }, [
         _c("label", { attrs: { for: "lname" } }, [
-          _vm._v("Last Name\n                "),
+          _vm._v("\n                Last Name\n                "),
           _c("small", { staticClass: "text-primary" }, [_vm._v("required")])
         ]),
         _vm._v(" "),
@@ -38152,6 +38179,32 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-row" }, [
       _c("div", { staticClass: "form-group col-12 col-md-4" }, [
+        _c("label", { attrs: { for: "suffix" } }, [_vm._v("Suffix")]),
+        _vm._v(" "),
+        _c(
+          "select",
+          { staticClass: "form-control", attrs: { name: "suffix" } },
+          [
+            _c("option", { attrs: { value: "", selected: "" } }, [
+              _vm._v("Select")
+            ]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "jr" } }, [_vm._v("Jr")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "sr" } }, [_vm._v("Sr")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "II" } }, [_vm._v("II")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "II" } }, [_vm._v("III")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "IV" } }, [_vm._v("IV")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "V" } }, [_vm._v("V")])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-group col-12 col-md-4" }, [
         _c("label", { attrs: { for: "fname" } }, [_vm._v("Nickname")]),
         _vm._v(" "),
         _c("input", {
@@ -38162,7 +38215,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "form-group col-12 col-md-4" }, [
         _c("label", { attrs: { for: "bday" } }, [
-          _vm._v("Birth Date\n                "),
+          _vm._v("\n                Birth Date\n                "),
           _c("small", { staticClass: "text-primary" }, [_vm._v("required")])
         ]),
         _vm._v(" "),
@@ -38175,11 +38228,17 @@ var staticRenderFns = [
             placeholder: "mm/dd/yyyy"
           }
         })
-      ]),
-      _vm._v(" "),
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-row" }, [
       _c("div", { staticClass: "form-group col-12 col-md-4" }, [
         _c("label", { attrs: { for: "cstatus" } }, [
-          _vm._v("Civil Status\n                "),
+          _vm._v("\n                Civil Status\n                "),
           _c("small", { staticClass: "text-primary" }, [_vm._v("required")])
         ]),
         _vm._v(" "),
@@ -38202,14 +38261,8 @@ var staticRenderFns = [
             _c("option", { attrs: { value: "di" } }, [_vm._v("Divorced")])
           ]
         )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-row" }, [
+      ]),
+      _vm._v(" "),
       _c("div", { staticClass: "form-group col-12 col-md-4" }, [
         _c("label", { attrs: { for: "occupation" } }, [_vm._v("Occupation")]),
         _vm._v(" "),
@@ -38226,7 +38279,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "form-group col-12 col-md-4" }, [
         _c("label", { attrs: { for: "lstatus" } }, [
-          _vm._v("Living Status\n                "),
+          _vm._v("\n                Living Status\n                "),
           _c("small", { staticClass: "text-primary" }, [_vm._v("required")])
         ]),
         _vm._v(" "),
@@ -38241,25 +38294,29 @@ var staticRenderFns = [
             _c("option", { attrs: { value: "deceased" } }, [_vm._v("Deceased")])
           ]
         )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group col-12 col-md-4" }, [
+      _c("label", { attrs: { for: "mobnum" } }, [
+        _vm._v("\n                Mobile Number\n                "),
+        _c("small", { staticClass: "text-primary" }, [_vm._v("required")])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "form-group col-12 col-md-4" }, [
-        _c("label", { attrs: { for: "mobnum" } }, [
-          _vm._v("Mobile Number\n                "),
-          _c("small", { staticClass: "text-primary" }, [_vm._v("required")])
-        ]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "form-control",
-          attrs: {
-            type: "tel",
-            name: "mobnum",
-            required: "",
-            pattern: "\\d{11}",
-            title: "Input 11 digit number."
-          }
-        })
-      ])
+      _c("input", {
+        staticClass: "form-control",
+        attrs: {
+          type: "tel",
+          name: "mobnum",
+          required: "",
+          pattern: "\\d{11}",
+          title: "Input 11 digit number."
+        }
+      })
     ])
   },
   function() {
@@ -38423,6 +38480,21 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "form-row" }, [
       _c("div", { staticClass: "form-group col-12 col-md-4" }, [
+        _c("label", { attrs: { for: "suffix" } }, [_vm._v("Suffix")]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "form-control text-capitalize",
+          attrs: {
+            type: "text",
+            name: "suffix",
+            readonly: "",
+            "aria-readonly": "true"
+          },
+          domProps: { value: _vm.personDetails.suffix }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-group col-12 col-md-4" }, [
         _c("label", { attrs: { for: "fname" } }, [_vm._v("Nickname")]),
         _vm._v(" "),
         _c("input", {
@@ -38450,8 +38522,10 @@ var render = function() {
           },
           domProps: { value: _vm.age + " Years Old" }
         })
-      ]),
-      _vm._v(" "),
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-row" }, [
       _c("div", { staticClass: "form-group col-12 col-md-4" }, [
         _c("label", { attrs: { for: "cstatus" } }, [_vm._v("Civil Status")]),
         _vm._v(" "),
@@ -38465,10 +38539,8 @@ var render = function() {
           },
           domProps: { value: _vm.civilStatus }
         })
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "form-row" }, [
+      ]),
+      _vm._v(" "),
       _c("div", { staticClass: "form-group col-12 col-md-4" }, [
         _c("label", { attrs: { for: "occupation" } }, [_vm._v("Occupation")]),
         _vm._v(" "),
@@ -38497,8 +38569,10 @@ var render = function() {
           },
           domProps: { value: _vm.personDetails.lstatus }
         })
-      ]),
-      _vm._v(" "),
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-row" }, [
       _c("div", { staticClass: "form-group col-12 col-md-4" }, [
         _c("label", { attrs: { for: "mobnum" } }, [_vm._v("Mobile Number ")]),
         _vm._v(" "),
@@ -38512,10 +38586,8 @@ var render = function() {
           },
           domProps: { value: _vm.personDetails.mobnum }
         })
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "form-row" }, [
+      ]),
+      _vm._v(" "),
       _c("div", { staticClass: "form-group col-12 col-md-4" }, [
         _c("label", { attrs: { for: "occupation" } }, [
           _vm._v("Registered On:")
@@ -38699,30 +38771,28 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "form-row" }, [
-    _c("div", { staticClass: "form-group col-12 col-md-4" }, [
-      _c("label", { attrs: { for: "photo" } }, [
-        _vm._v(_vm._s(_vm.state) + " Photo")
-      ]),
+  return _c("div", { staticClass: "form-group col-12 col-md-4" }, [
+    _c("label", { attrs: { for: "photo" } }, [
+      _vm._v(_vm._s(_vm.state) + " Photo")
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "custom-file" }, [
+      _c("input", {
+        staticClass: "custom-file-input",
+        attrs: {
+          type: "file",
+          id: "photo",
+          name: "photo",
+          title: "2 x 2 profile photo"
+        },
+        on: { change: _vm.detectFileName }
+      }),
       _vm._v(" "),
-      _c("div", { staticClass: "custom-file" }, [
-        _c("input", {
-          staticClass: "custom-file-input",
-          attrs: {
-            type: "file",
-            id: "photo",
-            name: "photo",
-            title: "2 x 2 profile photo"
-          },
-          on: { change: _vm.detectFileName }
-        }),
-        _vm._v(" "),
-        _c(
-          "label",
-          { staticClass: "custom-file-label", attrs: { for: "photo" } },
-          [_vm._v(_vm._s(_vm.fileName))]
-        )
-      ])
+      _c(
+        "label",
+        { staticClass: "custom-file-label", attrs: { for: "photo" } },
+        [_vm._v(_vm._s(_vm.fileName))]
+      )
     ])
   ])
 }

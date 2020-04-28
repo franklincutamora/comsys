@@ -53,6 +53,21 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-12 col-md-4">
+                    <label for="suffix">Suffix</label>
+                    @php
+                        $suffix = [
+                            '' => 'Select',
+                            'jr' => 'Jr',
+                            'sr' => 'Sr',
+                            'II' => 'II',
+                            'III' => 'III',
+                            'IV' => 'IV',
+                            'V' => 'V'
+                        ];
+                    @endphp
+                    {{ Form::select('suffix', $suffix, $person->suffix, ['class' => 'form-control']) }}
+                </div>
+                <div class="form-group col-12 col-md-4">
                     <label for="fname">Nickname</label>
                     <input type="text" class="form-control" name="nname" pattern="[a-zA-Z-_ ]+" value="{{$person->nname}}">
                 </div>
@@ -60,6 +75,8 @@
                     <label for="bday">Birth Date <small class="text-primary">required</small></label>
                     <input type="date" class="form-control" name="bday" required placeholder="mm/dd/yyyy" value="{{$person->bday}}">
                 </div>
+            </div>
+            <div class="form-row">
                 <div class="form-group col-12 col-md-4">
                     <label for="cstatus">Civil Status <small class="text-primary">required</small></label>
                     @php
@@ -74,8 +91,6 @@
                     @endphp
                     {{ Form::select('cstatus', $cstatusarr, $person->cstatus, ['class' => 'form-control']) }}
                 </div>
-            </div>
-            <div class="form-row">
                 <div class="form-group col-12 col-md-4">
                     <label for="occupation">Occupation</label>
                     <input type="text" class="form-control" name="occupation" pattern="[a-zA-Z ]+" value="{{$person->occupation}}" title="Alphabet letters only.">
@@ -90,12 +105,14 @@
                     @endphp
                     {{ Form::select('lstatus', $lstatusarr, $person->lstatus, ['class' => 'form-control']) }}
                 </div>
+            </div>
+            <div class="form-row">
                 <div class="form-group col-12 col-md-4">
                     <label for="mobnum">Mobile Number <small class="text-primary">required</small></label>
                     <input type="tel" class="form-control" name="mobnum" required pattern="\d{11}" value="{{$person->mobnum}}" title="Input 11 digit number.">
                 </div>
+                <upload-photo-component state="Change"></upload-photo-component>
             </div>
-            <upload-photo-component state="Change"></upload-photo-component>
             <div class="form-row">
                 <div class="form-group col-12">
                     <div class="float-md-right text-center">

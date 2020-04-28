@@ -37,6 +37,17 @@
         </div>
         <div class="form-row">
             <div class="form-group col-12 col-md-4">
+                <label for="suffix">Suffix</label>
+                <input
+                    type="text"
+                    class="form-control text-capitalize"
+                    name="suffix"
+                    readonly
+                    aria-readonly="true"
+                    :value="personDetails.suffix"
+                />
+            </div>
+            <div class="form-group col-12 col-md-4">
                 <label for="fname">Nickname</label>
                 <input
                     type="text"
@@ -58,6 +69,8 @@
                     :value="age + ' Years Old'"
                 />
             </div>
+        </div>
+        <div class="form-row">
             <div class="form-group col-12 col-md-4">
                 <label for="cstatus">Civil Status</label>
                 <input
@@ -69,8 +82,6 @@
                     :value="civilStatus"
                 />
             </div>
-        </div>
-        <div class="form-row">
             <div class="form-group col-12 col-md-4">
                 <label for="occupation">Occupation</label>
                 <input
@@ -93,6 +104,8 @@
                     :value="personDetails.lstatus"
                 />
             </div>
+        </div>
+        <div class="form-row">
             <div class="form-group col-12 col-md-4">
                 <label for="mobnum">Mobile Number </label>
                 <input
@@ -104,8 +117,6 @@
                     :value="personDetails.mobnum"
                 />
             </div>
-        </div>
-        <div class="form-row">
             <div class="form-group col-12 col-md-4">
                 <label for="occupation">Registered On:</label>
                 <input

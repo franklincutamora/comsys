@@ -2,10 +2,10 @@
     <div class="card-body">
         <div class="form-row">
             <div class="form-group col-12 col-md-4">
-                <label for="fname"
-                    >First Name
-                    <small class="text-primary">required</small></label
-                >
+                <label for="fname">
+                    First Name
+                    <small class="text-primary">required</small>
+                </label>
                 <input
                     type="text"
                     class="form-control"
@@ -20,10 +20,10 @@
                 <input type="text" class="form-control" name="mname" />
             </div>
             <div class="form-group col-12 col-md-4">
-                <label for="lname"
-                    >Last Name
-                    <small class="text-primary">required</small></label
-                >
+                <label for="lname">
+                    Last Name
+                    <small class="text-primary">required</small>
+                </label>
                 <input
                     type="text"
                     class="form-control"
@@ -36,6 +36,18 @@
         </div>
         <div class="form-row">
             <div class="form-group col-12 col-md-4">
+                <label for="suffix">Suffix</label>
+                <select name="suffix" class="form-control">
+                    <option value selected>Select</option>
+                    <option value="jr">Jr</option>
+                    <option value="sr">Sr</option>
+                    <option value="II">II</option>
+                    <option value="II">III</option>
+                    <option value="IV">IV</option>
+                    <option value="V">V</option>
+                </select>
+            </div>
+            <div class="form-group col-12 col-md-4">
                 <label for="fname">Nickname</label>
                 <input
                     type="text"
@@ -45,10 +57,10 @@
                 />
             </div>
             <div class="form-group col-12 col-md-4">
-                <label for="bday"
-                    >Birth Date
-                    <small class="text-primary">required</small></label
-                >
+                <label for="bday">
+                    Birth Date
+                    <small class="text-primary">required</small>
+                </label>
                 <input
                     type="date"
                     class="form-control"
@@ -57,11 +69,13 @@
                     placeholder="mm/dd/yyyy"
                 />
             </div>
+        </div>
+        <div class="form-row">
             <div class="form-group col-12 col-md-4">
-                <label for="cstatus"
-                    >Civil Status
-                    <small class="text-primary">required</small></label
-                >
+                <label for="cstatus">
+                    Civil Status
+                    <small class="text-primary">required</small>
+                </label>
                 <select name="cstatus" class="form-control">
                     <option value="si" selected>Single</option>
                     <option value="ma">Married</option>
@@ -71,8 +85,6 @@
                     <option value="di">Divorced</option>
                 </select>
             </div>
-        </div>
-        <div class="form-row">
             <div class="form-group col-12 col-md-4">
                 <label for="occupation">Occupation</label>
                 <input
@@ -84,20 +96,22 @@
                 />
             </div>
             <div class="form-group col-12 col-md-4">
-                <label for="lstatus"
-                    >Living Status
-                    <small class="text-primary">required</small></label
-                >
+                <label for="lstatus">
+                    Living Status
+                    <small class="text-primary">required</small>
+                </label>
                 <select name="lstatus" class="form-control">
                     <option value="alive" selected>Alive</option>
                     <option value="deceased">Deceased</option>
                 </select>
             </div>
+        </div>
+        <div class="form-row">
             <div class="form-group col-12 col-md-4">
-                <label for="mobnum"
-                    >Mobile Number
-                    <small class="text-primary">required</small></label
-                >
+                <label for="mobnum">
+                    Mobile Number
+                    <small class="text-primary">required</small>
+                </label>
                 <input
                     type="tel"
                     class="form-control"
@@ -107,14 +121,14 @@
                     title="Input 11 digit number."
                 />
             </div>
+            <upload-photo-component state="Upload"></upload-photo-component>
         </div>
-        <upload-photo-component state="Upload"></upload-photo-component>
         <div class="form-row">
             <div class="form-group col-12">
                 <div class="float-md-right text-center">
-                    <a :href="personsUrl" class="btn btn-primary text-white"
-                        ><span class="fa fa-arrow-left"></span> Cancel</a
-                    >
+                    <a :href="personsUrl" class="btn btn-primary text-white">
+                        <span class="fa fa-arrow-left"></span> Cancel
+                    </a>
                     <button type="submit" class="btn btn-success">
                         <span class="fa fa-save"></span> Save
                     </button>

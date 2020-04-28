@@ -86,6 +86,7 @@ class PersonsController extends Controller
         $person->fname = strtolower($request->input('fname'));
         $person->mname = strtolower($request->input('mname'));
         $person->lname = strtolower($request->input('lname'));
+        $person->suffix = $request->input('suffix');
         $person->bday = $bday;
         $person->cstatus = $request->input('cstatus');
         $person->nname = strtolower($request->input('nname'));
@@ -170,6 +171,7 @@ class PersonsController extends Controller
         $person->fname = strtolower($request->input('fname'));
         $person->mname = strtolower($request->input('mname'));
         $person->lname = strtolower($request->input('lname'));
+        $person->suffix = $request->input('suffix');
         $person->bday = $bday;
         $person->cstatus = $request->input('cstatus');
         $person->nname = strtolower($request->input('nname'));
