@@ -13963,6 +13963,13 @@ a.text-dark:focus {
   line-height: 100px;
 }
 
+.list-counter {
+  display: inline-block;
+  background-color: lightblue;
+  width: 1.5em;
+  height: 1.5em;
+}
+
 @media (max-width: 767px) {
   .profile-thumbnail {
     margin: auto;

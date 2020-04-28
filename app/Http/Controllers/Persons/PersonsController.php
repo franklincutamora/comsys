@@ -39,7 +39,12 @@ class PersonsController extends Controller
         $field = $request->field;
         $keyword = $request->keyword;
         $orderBy = $request->orderBy;
-        $persons = Person::where($field, 'like', "%{$keyword}%")->orderBy($field, $orderBy)->paginate(20);
+        $persons = Person::orderBy($field, $orderBy)->paginate(20);
+        
+        if ($keyword !== '') {
+            $persons = Person::where($field, 'like', "%{$keyword}%")->orderBy($field, $orderBy)->paginate(20);
+        }
+        
         $data = array(
             'persons' => $persons,
             'search' => true,

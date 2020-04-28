@@ -2339,10 +2339,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -38666,17 +38662,13 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("div", { staticClass: "form-row" }, [
           _c("div", { staticClass: "form-group col-12" }, [
-            _c("label", { attrs: { for: "keyword" } }, [
-              _vm._v("Keyword\n                    "),
-              _c("small", { staticClass: "text-primary" }, [_vm._v("required")])
-            ]),
+            _c("label", { attrs: { for: "keyword" } }, [_vm._v("Keyword")]),
             _vm._v(" "),
             _c("input", {
               staticClass: "form-control",
               attrs: {
                 type: "text",
                 name: "keyword",
-                required: "",
                 pattern: "[a-zA-Z ]+",
                 title: "Alphabet letters only."
               }

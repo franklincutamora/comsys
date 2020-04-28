@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<section class="container">
+<section class="container persons">
     <h1 class="clearfix">Persons
         <div class="float-md-right">
             <button type="button" class="btn btn-info text-white" data-toggle="modal" data-target="#searchPerson"><span class="fa fa-search"></span> Search</button>
@@ -12,8 +12,8 @@
         </div>
     </h1>
     @if(count($persons) > 0)
-        @foreach($persons as $person)
-        <div class="card mb-medium">
+        @foreach($persons as $key => $person)
+        <div class="card mb-medium person-item">
             @php
                 $fname = ucfirst($person->fname);
                 $lname = ucfirst($person->lname).', ';
@@ -22,9 +22,10 @@
                     $mname = ' '.ucfirst(substr($person->mname, 0, 1)).'.';
                 }
             @endphp
-            <div class="card-header"><div class="lead">@php echo $lname.$fname.$mname; @endphp</div></div>
+            <div class="card-header">
+                <div class="lead"><small class="list-counter border border-primary rounded-circle text-center">{{ $persons->firstItem() + $key }}</small> @php echo $lname.$fname.$mname; @endphp</div>
+            </div>
             <div class="card-body clearfix">
-                
                 <div class="float-md-left text-center">
                     <div>Last Update: {{ date("F j, Y, g:i A", strtotime($person->updated_at)) }}</div>
                 </div>

@@ -15,15 +15,11 @@
             <p>Select criteria to narrow your search.</p>
             <div class="form-row">
                 <div class="form-group col-12">
-                    <label for="keyword"
-                        >Keyword
-                        <small class="text-primary">required</small></label
-                    >
+                    <label for="keyword">Keyword</label>
                     <input
                         type="text"
                         class="form-control"
                         name="keyword"
-                        required
                         pattern="[a-zA-Z ]+"
                         title="Alphabet letters only."
                     />
