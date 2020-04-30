@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <section class="container">
-    <h1 class="clearfix">Add New Person</h1>
+    <h1 class="clearfix">Add New Member</h1>
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -14,7 +14,7 @@
     <div class="card">
         {!! Form::open(['action' => 'Persons\PersonsController@store', 'enctype' => 'multipart/form-data']) !!}
         @csrf
-        <create-form-body persons-url="{{ url('/persons') }}"></create-form-body>
+        <create-form-body persons-url="{{ url('/members') }}"></create-form-body>
         {!! Form::close() !!}
     </div>
 </section>

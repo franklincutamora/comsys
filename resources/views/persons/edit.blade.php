@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <section class="container">
-    <h1 class="clearfix">Edit Person Details</h1>
+    <h1 class="clearfix">Edit Member's Details</h1>
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -116,7 +116,7 @@
             <div class="form-row">
                 <div class="form-group col-12">
                     <div class="float-md-right text-center">
-                        <a href="{{ url('/persons').'/'.$person->id }}" class="btn btn-primary"><span class="fa fa-backward"></span> Discard Changes</a>
+                        <a href="{{ url('/members').'/'.$person->id }}" class="btn btn-primary"><span class="fa fa-backward"></span> Discard Changes</a>
                         <button type="submit" class="btn btn-success"><span class="fa fa-save"></span> Save Updates</button>
                     </div>
                 </div>

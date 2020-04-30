@@ -31,5 +31,6 @@
             @yield('content')
         </main>
     </div>
+    <script src="{{ asset('js/custom.js') }}" defer></script>
 </body>
 </html>

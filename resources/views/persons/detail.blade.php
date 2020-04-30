@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <section class="container">
-    <h1 class="clearfix">Person Details
+    <h1 class="clearfix">Member's Details
         <div class="float-md-right">
             <a href="{{ url('/dashboard') }}" class="btn btn-success text-white"><span class="fa fa-arrow-left"></span> Back to Dashboard</a>
         </div>
@@ -40,14 +40,14 @@
             <div class="form-row">
                 <div class="form-group col-12">
                     <div class="float-md-right text-center">
-                        <a href="{{ url('/persons') }}" class="btn btn-primary text-white"><span class="fa fa-arrow-left"></span> Persons List</a>
-                        <a href="{{ url("/persons/$person->id/edit") }}" class="btn btn-warning"><span class="fa fa-pencil"></span> Edit</a>                    
+                        <a href="{{ url('/members') }}" class="btn btn-primary text-white"><span class="fa fa-arrow-left"></span> Members List</a>
+                        <a href="{{ url("/members/$person->id/edit") }}" class="btn btn-warning"><span class="fa fa-pencil"></span> Edit</a>                    
                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDelete"><span class="fa fa-trash"></span> Delete</button>
-                        @include('inc.modal')
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+@include('inc.modaldelete')
 @endsection

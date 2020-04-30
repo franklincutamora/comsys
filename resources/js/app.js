@@ -24,6 +24,10 @@ Vue.component(
     require("./components/ExampleComponent.vue").default
 );
 
+
+/**
+ * Persons VueJs Components
+ */
 Vue.component(
     "upload-photo-component",
     require("./components/Persons/UploadPhotoComponent.vue").default
@@ -47,6 +51,13 @@ Vue.component(
 Vue.component(
     "detail-form-body",
     require("./components/Persons/DetailFormBody.vue").default
+);
+
+
+/** Dashboard VueJs Components */
+Vue.component(
+    "card-total-members",
+    require("./components/Dashboard/CardTotalMembers.vue").default
 );
 
 

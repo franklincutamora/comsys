@@ -18,7 +18,7 @@
             <ul class="navbar-nav mr-auto">
                 @auth
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/persons') }}">Persons</a>
+                    <a class="nav-link" href="{{ url('/members') }}">Members</a>
                 </li>
                 @endauth
                 <li class="nav-item">

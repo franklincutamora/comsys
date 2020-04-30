@@ -52,6 +52,7 @@ class PersonsController extends Controller
             'orderBy' => Person::getFieldName($orderBy),
             'field' => Person::getFieldName($field)
         );
+        
         return view('persons.index')->with($data);
     }
 
@@ -108,7 +109,7 @@ class PersonsController extends Controller
 
         $person->save();
 
-        return redirect('/persons')->with('success', 'New person successfully added.');
+        return redirect('/members')->with('success', 'New member successfully added.');
     }
 
     /**
@@ -194,7 +195,7 @@ class PersonsController extends Controller
 
         $person->save();
 
-        return redirect('/persons/'.$person->id)->with('success', 'Person successfully updated.');
+        return redirect('/members/'.$person->id)->with('success', 'Member successfully updated.');
     }
 
     /**
@@ -213,7 +214,7 @@ class PersonsController extends Controller
 
         $person->delete();
 
-        return redirect('/persons')->with('success', 'Person successfully deleted.');
+        return redirect('/members')->with('success', 'Member successfully deleted.');
     }
 
     /**
