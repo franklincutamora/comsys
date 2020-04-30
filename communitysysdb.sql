@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 27, 2020 at 12:47 PM
+-- Generation Time: Apr 30, 2020 at 12:09 PM
 -- Server version: 10.3.15-MariaDB
 -- PHP Version: 7.3.6
 
@@ -60,7 +60,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (6, '2014_10_12_100000_create_password_resets_table', 3),
 (7, '2020_04_21_010051_create_people_table', 3),
 (8, '2020_04_21_092700_add_column_peope_table', 4),
-(9, '2020_04_22_040807_add_photo_column_people_table', 5);
+(9, '2020_04_22_040807_add_photo_column_people_table', 5),
+(10, '2020_04_28_093616_add_suffix_column_on_persons_table', 6);
 
 -- --------------------------------------------------------
 
@@ -93,20 +94,22 @@ CREATE TABLE `people` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `lstatus` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'alive',
-  `photo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `photo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `suffix` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `people`
 --
 
-INSERT INTO `people` (`id`, `fname`, `mname`, `lname`, `bday`, `cstatus`, `nname`, `occupation`, `mobnum`, `created_at`, `updated_at`, `lstatus`, `photo`) VALUES
-(1, 'franklin', 'cruz', 'cutamora', '1990-09-26', 'ma', 'pons', 'web developer', '09123456789', '2020-04-20 17:22:44', '2020-04-24 06:36:37', 'alive', '1587710197.JPG'),
-(4, 'clown', 'fish', 'fish', '2001-04-07', 'wi', '', '', '99999999999', '2020-04-21 19:06:51', '2020-04-22 17:54:05', 'alive', NULL),
-(8, 'francisco', 'yana', 'cutamora', '1961-02-05', 'ma', 'badong', 'security guard', '12345678901', '2020-04-27 01:59:28', '2020-04-27 01:59:28', 'alive', '1587952768.png'),
-(11, 'racelle', 'palacio', 'cutamora', '1988-10-20', 'ma', 'raz', 'manager', '78945612301', '2020-04-27 02:55:41', '2020-04-27 02:55:41', 'alive', '1587956141.png'),
-(13, 'firsttest', 'middle', 'lasttest', '2020-04-20', 'wi', 'testtest', 'i am a test', '12345678901', '2020-04-27 03:53:29', '2020-04-27 08:47:03', 'alive', NULL),
-(14, 'john', 'cooper', 'doe', '1990-04-06', 'wi', 'john doe', 'national hero', '12345678901', '2020-04-27 08:47:53', '2020-04-27 08:47:53', 'alive', NULL);
+INSERT INTO `people` (`id`, `fname`, `mname`, `lname`, `bday`, `cstatus`, `nname`, `occupation`, `mobnum`, `created_at`, `updated_at`, `lstatus`, `photo`, `suffix`) VALUES
+(1, 'franklin', 'cruz', 'cutamora', '1990-09-26', 'ma', 'pons', 'web developer', '09123456789', '2020-04-20 17:22:44', '2020-04-24 06:36:37', 'alive', '1587710197.JPG', NULL),
+(4, 'clown', 'fish', 'fish', '2001-04-07', 'wi', '', '', '99999999999', '2020-04-21 19:06:51', '2020-04-22 17:54:05', 'alive', NULL, NULL),
+(8, 'francisco', 'yana', 'cutamora', '1961-02-05', 'ma', 'badong', 'security guard', '12345678901', '2020-04-27 01:59:28', '2020-04-27 01:59:28', 'alive', '1587952768.png', NULL),
+(11, 'racelle', 'palacio', 'cutamora', '1988-10-20', 'ma', 'raz', 'manager', '78945612301', '2020-04-27 02:55:41', '2020-04-27 02:55:41', 'alive', '1587956141.png', NULL),
+(14, 'john', 'cooper', 'doe', '1990-04-06', 'wi', 'john doe', 'national hero', '12345678901', '2020-04-27 08:47:53', '2020-04-28 02:07:49', 'alive', NULL, 'sr'),
+(15, 'peter', '', 'griffin', '1988-04-13', 'ma', 'peta', 'cleric', '99999999999', '2020-04-28 02:11:27', '2020-04-28 02:11:27', 'alive', '1588039887.png', 'II'),
+(17, 'meghan', '', 'griffin', '1992-02-05', 'si', 'meg', 'student', '99999999999', '2020-04-30 07:11:43', '2020-04-30 07:11:43', 'alive', '1588230703.png', NULL);
 
 -- --------------------------------------------------------
 
@@ -181,13 +184,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `people`
 --
 ALTER TABLE `people`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `users`
